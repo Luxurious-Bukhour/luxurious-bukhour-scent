@@ -7,18 +7,19 @@
 }
 
 /* Global reset */
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 body{
   margin:0;
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: var(--muted); /* white-first */
+  background: var(--muted);
   color: var(--black);
   display:flex;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  flex-direction: column;
 }
 
-/* SIDEBAR (no logo or description) */
+/* SIDEBAR */
 .sidebar{
   width:220px;
   background:var(--black);
@@ -47,7 +48,7 @@ body{
   transform: translateX(4px);
 }
 
-/* MAIN container */
+/* MAIN */
 .main{
   margin-left:220px;
   padding:28px;
@@ -55,7 +56,7 @@ body{
   max-width:1300px;
 }
 
-/* HEADER (black area with logo centered) */
+/* HEADER */
 .header-black{
   background:var(--black);
   color:var(--gold);
@@ -77,24 +78,18 @@ body{
 
 /* PRODUCTS SECTION */
 .products-section{ margin:18px 0 28px; }
-.section-title{ display:block; text-align:center; font-family:'Playfair Display', serif; color:var(--gold); font-size:22px; margin-bottom:14px; }
-
-/* wrapper (gold border around the gallery area) */
+.section-title{ text-align:center; font-family:'Playfair Display', serif; color:var(--gold); font-size:22px; margin-bottom:14px; }
 .products-wrapper{
   border:2px solid var(--gold);
   padding:18px;
   border-radius:10px;
   background:var(--white);
 }
-
-/* grid */
 .product-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:20px;
 }
-
-/* card */
 .product-card{
   background: var(--card-dark);
   color: #fff;
@@ -109,8 +104,6 @@ body{
 .product-card img{ width:100%; height:240px; object-fit:cover; border-radius:8px; display:block; margin-bottom:12px; }
 .product-card h3{ margin:6px 0; font-size:18px; color:var(--white); }
 .price{ color:var(--gold); font-weight:700; margin-bottom:10px; }
-
-/* buy button (gold) */
 .btn-buy{
   display:inline-block;
   background:var(--gold);
@@ -123,7 +116,7 @@ body{
 }
 .btn-buy:hover{ background:#b8962e; transform: translateY(-2px); }
 
-/* CONTACT SECTION */
+/* CONTACT */
 .contact-section{
   margin-top:28px;
   border-radius:10px;
@@ -133,8 +126,6 @@ body{
   color:#fff;
 }
 .contact-section h2{ color:var(--gold); text-align:center; margin-bottom:12px; font-family:'Playfair Display', serif; }
-
-/* contact boxes */
 .contact-row{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:16px; }
 .contact-box{
   display:flex;
@@ -150,8 +141,6 @@ body{
 }
 .contact-box i{ color:var(--gold); font-size:20px; }
 .contact-box:hover{ background:var(--gold); color:var(--black); transform:translateY(-3px); }
-
-/* map wrapper */
 .map-wrap{ border-radius:8px; overflow:hidden; margin-top:10px; }
 
 /* RESPONSIVE */
@@ -162,12 +151,10 @@ body{
   .main{ padding:20px; }
 }
 @media (max-width:700px){
-  /* make sidebar top bar */
   .sidebar{
     width:100%;
     height:auto;
     position:relative;
-    display:flex;
     flex-direction:row;
     justify-content:center;
     gap:12px;
